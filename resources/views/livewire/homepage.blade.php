@@ -45,5 +45,19 @@
                 </div>
             </a>
         </div>
+
+        <div class="h-[90vh]">
+            <div
+                class="relative z-[-10] mt-[-12vh] ml-[-5vw] w-[300vw] h-[70vh] -rotate-6 bg-[radial-gradient(circle,_rgba(177,_217,_58,_1)_0%,_rgba(134,_178,_21,_1)_65%)]">
+            </div>
+            <img class="mt-[-66vh] ml-[3vw]" src="{{ asset('images/homepage-benefit.svg') }}"
+                alt="Homepage Benefit Perempuan">
+            <img class="mt-[-27vh] ml-[1vw]" src="{{ asset('images/homepage-benefit-hiasan.svg') }}"
+                alt="Homepage Anggur Hiasan Benefit">
+            <img class="ml-[50vw] mt-[-84vh]" src="{{ asset('images/homepage-benefit-why-choose.svg') }}"
+                alt="Homepage Tulisan Benefit">
+            <img class="ml-[48vw] mt-[5vh]" src="{{ asset('images/homepage-benefit-point.svg') }}"
+                alt="Homepage Tulisan Point Benefit">
+        </div>
     </div>
 </div>
