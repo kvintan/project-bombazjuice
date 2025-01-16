@@ -46,6 +46,42 @@
             </a>
         </div>
 
+        <div class="h-[90vh] justify-items-center">
+            <img src="{{ asset('images/homepage-most-favorable.svg') }}" alt="Homepage Most Favorable">
+            <div class="w-[70vw] h-[62vh] mt-[4vh] flex flex-row gap-x-[3vw]">
+                <div
+                    class="w-[22vw] h-[57vh] rounded-[1vw] mt-[5vh] bg-[radial-gradient(87.89%_47.34%_at_66.62%_61.78%,_#B1D93A_0%,_#86B215_65%)] justify-items-center">
+                    <img class="ml-[-1vw]" src="{{ asset('images/homepage-botol-kiri.svg') }}"
+                        alt="Homepage Botol Kiri">
+                    <img class="mt-[-4vh]" src="{{ asset('images/homepage-tulisan-kiri.svg') }}"
+                        alt="Homepage Tulisan Botol Kiri">
+                    <p class="text-white font-afacad font-semibold w-auto text-[1.3vw]">Orange & Strawberry</p>
+                    <p class="text-white font-afacad w-auto text-[1vw]">Rp 40.000 / bottle</p>
+                </div>
+                <div
+                    class="w-[22vw] h-[62vh] rounded-[1vw] bg-[radial-gradient(87.89%_47.34%_at_66.62%_61.78%,_#B1D93A_0%,_#86B215_65%)] justify-items-center">
+                    <img class="ml-[-1.2vw] mt-[0.2vh] w-auto h-[47vh]"
+                        src="{{ asset('images/homepage-botol-tengah.svg') }}" alt="Homepage Botol Tengah">
+                    <img class="mt-[-4vh]" src="{{ asset('images/homepage-tulisan-tengah.svg') }}"
+                        alt="Homepage Tulisan Botol Tengah">
+                    <p class="text-white font-afacad font-semibold w-auto text-[1.3vw]">Mango & Pineapple</p>
+                    <p class="text-white font-afacad w-auto text-[1vw]">Rp 40.000 / bottle</p>
+                </div>
+                <div
+                    class="w-[22vw] h-[57vh] rounded-[1vw] mt-[5vh] bg-[radial-gradient(87.89%_47.34%_at_66.62%_61.78%,_#B1D93A_0%,_#86B215_65%)] justify-items-center">
+                    <img class="ml-[-1.2vw] mt-[0.2vh]" src="{{ asset('images/homepage-botol-kanan.svg') }}"
+                        alt="Homepage Botol Kanan">
+                    <img class="mt-[-4vh]" src="{{ asset('images/homepage-tulisan-kanan.svg') }}"
+                        alt="Homepage Tulisan Botol Kanan">
+                    <p class="text-white font-afacad font-semibold w-auto text-[1.3vw]">Strawberry & Banana</p>
+                    <p class="text-white font-afacad w-auto text-[1vw]">Rp 40.000 / bottle</p>
+                </div>
+            </div>
+            <img class="mt-[-83vh] ml-[-78.5vw]" src="{{ asset('images/homepage-nanas-kiri.svg') }}"
+                alt="Homepage Hiasan Nanas Kiri">
+            <img class="mt-[-3vh] ml-[85vw]" src="{{ asset('images/homepage-semangka-kanan.svg') }}" alt="">
+        </div>
+
         <div class="h-[90vh]">
             <div
                 class="relative z-[-10] mt-[-12vh] ml-[-5vw] w-[300vw] h-[70vh] -rotate-6 bg-[radial-gradient(circle,_rgba(177,_217,_58,_1)_0%,_rgba(134,_178,_21,_1)_65%)]">
