@@ -1,6 +1,4 @@
 <div>
-
-
     @if (session('status') && !session('has_logged_in'))
         <div class="bg-green-100 border border-green-400 text-green-700 px-4 py-3 rounded relative mb-4" role="alert">
             <strong class="font-bold font-afacad">Success!</strong>
@@ -50,7 +48,7 @@
             <img src="{{ asset('images/homepage-most-favorable.svg') }}" alt="Homepage Most Favorable">
             <div class="w-[70vw] h-[62vh] mt-[4vh] flex flex-row gap-x-[3vw]">
                 <div
-                    class="w-[22vw] h-[57vh] rounded-[1vw] mt-[5vh] bg-[radial-gradient(87.89%_47.34%_at_66.62%_61.78%,_#B1D93A_0%,_#86B215_65%)] justify-items-center">
+                    class="w-[22vw] h-[57vh] rounded-[1vw] mt-[5vh] bg-[radial-gradient(87.89%47.34%_at_66.62%_61.78%,#B1D93A_0%,_#86B215_65%)] justify-items-center">
                     <img class="ml-[-1vw]" src="{{ asset('images/homepage-botol-kiri.svg') }}"
                         alt="Homepage Botol Kiri">
                     <img class="mt-[-4vh]" src="{{ asset('images/homepage-tulisan-kiri.svg') }}"
@@ -59,7 +57,7 @@
                     <p class="text-white font-afacad w-auto text-[1vw]">Rp 40.000 / bottle</p>
                 </div>
                 <div
-                    class="w-[22vw] h-[62vh] rounded-[1vw] bg-[radial-gradient(87.89%_47.34%_at_66.62%_61.78%,_#B1D93A_0%,_#86B215_65%)] justify-items-center">
+                    class="w-[22vw] h-[62vh] rounded-[1vw] bg-[radial-gradient(87.89%47.34%_at_66.62%_61.78%,#B1D93A_0%,_#86B215_65%)] justify-items-center">
                     <img class="ml-[-1.2vw] mt-[0.2vh] w-auto h-[47vh]"
                         src="{{ asset('images/homepage-botol-tengah.svg') }}" alt="Homepage Botol Tengah">
                     <img class="mt-[-4vh]" src="{{ asset('images/homepage-tulisan-tengah.svg') }}"
@@ -68,7 +66,7 @@
                     <p class="text-white font-afacad w-auto text-[1vw]">Rp 40.000 / bottle</p>
                 </div>
                 <div
-                    class="w-[22vw] h-[57vh] rounded-[1vw] mt-[5vh] bg-[radial-gradient(87.89%_47.34%_at_66.62%_61.78%,_#B1D93A_0%,_#86B215_65%)] justify-items-center">
+                    class="w-[22vw] h-[57vh] rounded-[1vw] mt-[5vh] bg-[radial-gradient(87.89%47.34%_at_66.62%_61.78%,#B1D93A_0%,_#86B215_65%)] justify-items-center">
                     <img class="ml-[-1.2vw] mt-[0.2vh]" src="{{ asset('images/homepage-botol-kanan.svg') }}"
                         alt="Homepage Botol Kanan">
                     <img class="mt-[-4vh]" src="{{ asset('images/homepage-tulisan-kanan.svg') }}"
@@ -94,6 +92,40 @@
                 alt="Homepage Tulisan Benefit">
             <img class="ml-[48vw] mt-[5vh]" src="{{ asset('images/homepage-benefit-point.svg') }}"
                 alt="Homepage Tulisan Point Benefit">
+        </div>
+
+        <div class="h-[70vh] mt-[27vh] justify-items-center">
+            <div
+                class="w-[70vw] h-[50vh] rounded-[3.5vw] bg-[radial-gradient(37%47.65%_at_22.5%_41.58%,#B1D93A_0%,_#86B215_81%)]">
+            </div>
+            <img class="w-auto h-[13vh] mt-[-54vh] ml-[-45vw]" src="{{ asset('images/homepage-petik.svg') }}"
+                alt="Homepage Petik">
+            <img class="ml-[-37vw] mt-[-1vh] w-auto h-[35vh]" src="{{ asset('images/homepage-shanella.svg') }}"
+                alt="Homepage Shanella">
+            <p class="font-afacad font-bold text-[5vw] mt-[-38vh] ml-[5vw] text-white">Shanella</p>
+            <p class="font-afacad font-bold text-[2vw] mt-[-2vh] ml-[9vw] text-white">Juice, Just the Way I Like It
+            </p>
+            <p class="font-afacad text-white text-wrap w-[32vw] ml-[20vw] mt-[1vh] text-[1.5vw]">I love the JuiceLab
+                feature! It's
+                so fun
+                to
+                mix and
+                match
+                fruits
+                to
+                create a juice that's uniquely mine.
+                Whether I want something bold or sweet, BomBaz-Juice always gets it right!
+            </p>
+            <div class="w-[12vw] h-[2vh] mt-[2vh] ml-[3vw] gap-x-[1.2vw] flex flex-row">
+                <div class="w-[3.5vw] h-[2vh] rounded-[2vw] bg-DDE4DC-bg"></div>
+                <div class="bg-475C16-bg rounded-[1vw] w-[1.2vw] h-[2vh]"></div>
+                <div class="bg-475C16-bg rounded-[1vw] w-[1.2vw] h-[2vh]"></div>
+                <div class="bg-475C16-bg rounded-[1vw] w-[1.2vw] h-[2vh]"></div>
+            </div>
+            <img class="w-auto h-[40vh] mt-[-58vh] ml-[65vw]" src="{{ asset('images/homepage-hiasan-kiwi-2.svg') }}"
+                alt="Hiasan Kiwi Testimoni">
+            <img class="w-auto h-[40vh] ml-[-64vw] mt-[4vh]"
+                src="{{ asset('images/homepage-hiasan-strawberry-potong.svg') }}" alt="Hiasan Strawberry Testimoni">
         </div>
     </div>
 </div>
