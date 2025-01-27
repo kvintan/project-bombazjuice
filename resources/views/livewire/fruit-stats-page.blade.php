@@ -1,5 +1,7 @@
 <div>
-
+    <div class="relative w-full overflow-x-hidden">
+        <img class="relative w-full" src="{{ asset('images/fruitstats-background.svg') }}" alt="FruitStats Background">
+    </div>
 
     <div
         class="h-[190vh] bg-gradient-to-b [background:linear-gradient(180deg,#FFF_1.91%,#FFFFFE_44.38%,#F4F8CE_65.53%,#7DA758_100%)] min-h-screen relative flex flex-col items-center">
