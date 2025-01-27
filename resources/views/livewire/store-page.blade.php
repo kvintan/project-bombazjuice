@@ -1,6 +1,8 @@
 <div>
     <div class="h-[115vh]">
-
+        <div
+            class="relative h-[115vh] mt-[-14vh] z-[-10] justify-center bg-[linear-gradient(176deg,#A5CE30_0%,#BBDA64_20%,#D2E797_40%,#FFFFFF_71%)]">
+        </div>
         <div class="justify-items-center relative">
             <img class="relative mt-[-100vh]" src="{{ asset('images/store-tagline.svg') }}" alt="Store Tagline">
             <img class="relative" src="{{ asset('images/store-location.svg') }}" alt="Store Location">
