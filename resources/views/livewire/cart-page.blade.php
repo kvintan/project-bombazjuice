@@ -1,4 +1,9 @@
 <div>
+    <img class="ml-[25vw] w-[50vw]" src="{{ asset('images/cart-tagline.svg') }}" alt="Cart Tagline">
+    <p
+        class="ml-[20vw] rounded-[0.7vw] bg-[radial-gradient(87.89%47.34%_at_66.62%_61.78%,#B1D93A_0%,_#86B215_65%)] w-[60vw] h-[5vh] font-afacad text-white font-bold text-[1.5vw] flex items-center justify-center">
+        Order</p>
+
     <section class="py-8 antialiased md:py-16">
         <div class="mx-auto max-w-screen-xl px-4 2xl:px-0 mt-[-7vh]">
             <div class="mt-6 sm:mt-8 md:gap-6 lg:flex-col lg:items-start xl:gap-8">
