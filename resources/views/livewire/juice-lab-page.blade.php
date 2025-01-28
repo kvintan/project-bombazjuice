@@ -10,7 +10,8 @@
             alt="JuiceLab Description">
         <img class="relative ml-[9vw] mt-[5vh]" src="{{ asset('images/juicelab-try-it.svg') }}" alt="JuiceLab Try It">
     </div>
-    
+
+
     <div class="bg-[#FDF6E1] relative w-full h-[80vh] z-[-10] mt-[20vh] pt-[15vh]">
         <div class="relative w-[30vw] h-[10vh] ml-[38vw] flex flex-row">
             <p class="font-afacad text-[5vw] font-bold text-[#000000]">How It </p>
@@ -22,6 +23,12 @@
         </div>
 
     </div>
+
+
+    <div class="relative h-[50vh]">
+        <img class="relative w-full" src="{{ asset('images/juicelab-60k.svg') }}" alt="JuiceLab 60k">
+    </div>
+
 
     <div class="relative w-full h-[160vh]">
         <div class="relative w-[30vw] h-[10vh] ml-[40vw] mt-[5vh] flex flex-row">
@@ -74,4 +81,5 @@
 
 
     </div>
+
 </div>
