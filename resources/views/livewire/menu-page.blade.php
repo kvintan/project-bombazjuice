@@ -13,7 +13,7 @@
             </p>
         </a>
     </div>
-    
+
     <div class="w-full h-[3vh] bg-white relative">
     </div>
 
@@ -35,8 +35,9 @@
     <section class="py-8 antialiased md:py-12 mt-[-6vh]">
         <div class="mx-auto max-w-screen-xl px-4 2xl:px-0">
             <!-- Heading & Filters -->
-            <div class="mb-4 grid gap-4 sm:grid-cols-2 md:mb-8 lg:grid-cols-3 xl:grid-cols-4">
 
+            <div class="mb-4 grid gap-4 sm:grid-cols-2 md:mb-8 lg:grid-cols-3 xl:grid-cols-4">
+                {{-- One Mix Juice --}}
                 @foreach ($first12 as $product)
                     <div class="w-[19vw] rounded-[0.5vw] p-6 shadow-lg border-[0.05vw] border-gray-500 h-[55vh]">
                         <div class="h-[25vh] w-full relative mb-[2vh]">
