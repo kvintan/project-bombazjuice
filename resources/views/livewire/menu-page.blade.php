@@ -37,7 +37,6 @@
             <!-- Heading & Filters -->
 
             <div class="mb-4 grid gap-4 sm:grid-cols-2 md:mb-8 lg:grid-cols-3 xl:grid-cols-4">
-                {{-- One Mix Juice --}}
                 @foreach ($first12 as $product)
                     <div class="w-[19vw] rounded-[0.5vw] p-6 shadow-lg border-[0.05vw] border-gray-500 h-[55vh]">
                         <div class="h-[25vh] w-full relative mb-[2vh]">
