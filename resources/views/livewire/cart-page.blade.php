@@ -72,6 +72,45 @@
 
                         </div>
                     </div>
+
+                    <div class="mx-auto relative max-w-4xl flex-1 space-y-6 lg:mt-0 lg:w-full">
+                        <div class="space-y-4 ml-[40vw] mt-[2vh] mr-[-9vw] p-4 shadow-sm sm:p-6">
+                            <div
+                                class="flex justify-center bg-black relative bg-[radial-gradient(87.89%47.34%_at_66.62%_61.78%,#B1D93A_0%,_#86B215_65%)] rounded-[0.5vw] h-[6vh] pt-[1vh]">
+                                <p class="text-2xl font-semibold text-white font-afacad">
+                                    Cart total</p>
+                            </div>
+
+                            <div class="space-y-4">
+                                <dl class="flex items-center justify-between gap-4">
+                                    <dt class="text-[2vw] font-bold text-black font-afacad ml-[3vw]">Subtotal:
+                                    </dt>
+                                    <dd class="text-[2vw] font-bold text-black font-afacad mr-[3vw]">
+                                        {{ Number::currency($grand_total, 'IDR') }}</dd>
+                                </dl>
+                            </div>
+
+                            <form wire:submit.prevent='placeOrder'
+                                class="w-[26vw] h-[5vh] gap-[2.3vw] flex flex-row items-center relative" method="POST">
+                                @csrf
+                                <a wire:navigate href="/checkout" type="submit"
+                                    class="flex w-[26vw] h-[6vh] ml-[3vw] mt-[5vh] font-afacad  items-center justify-center rounded-lg bg-[radial-gradient(87.89%47.34%_at_66.62%_61.78%,#B1D93A_0%,_#86B215_65%)] px-5 py-2.5 font-bold text-[1.5vw] text-white focus:outline-none focus:ring-4 focus:ring-primary-300">Checkout</a>
+
+                                <div class="flex items-center justify-center gap-2">
+                                    <a wire:navigate href="/menu" title=""
+                                        class="flex w-[20vw] h-[6vh] ml-[-130vw] mt-[5vh] font-afacad  items-center justify-center rounded-lg bg-[radial-gradient(87.89%47.34%_at_66.62%_61.78%,#B1D93A_0%,_#86B215_65%)] px-5 py-2.5 font-bold text-[1.5vw] text-white focus:outline-none focus:ring-4 focus:ring-primary-300">
+                                        <svg class="h-5 w-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+                                            fill="none" viewBox="0 0 24 24">
+                                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                                stroke-width="2" d="M12 19l-7-7 7-7M5 12h14" />
+                                        </svg>
+                                        Continue Shopping
+                                    </a>
+                                </div>
+                            </form>
+
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
