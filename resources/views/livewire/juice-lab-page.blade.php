@@ -46,37 +46,57 @@
         <p class="relative text-black text-[5vw] ml-[30vw] mt-[10vh] font-afacad font-bold">Choose 3 kind of fruit</p>
 
         <div class="relative w-[76vw] h-[60vh] mt-[10vh] ml-[12vw] flex flex-col gap-[5vh]">
-            <div class="relative flex flex-row gap-[3.1vw]">
-                <img src="{{ asset('images/juicelab-buah-1.svg') }}" alt="JuiceLab Buah 1">
-                <img src="{{ asset('images/juicelab-buah-2.svg') }}" alt="JuiceLab Buah 2">
-                <img src="{{ asset('images/juicelab-buah-3.svg') }}" alt="JuiceLab Buah 3">
-                <img src="{{ asset('images/juicelab-buah-4.svg') }}" alt="JuiceLab Buah 4">
-                <img src="{{ asset('images/juicelab-buah-5.svg') }}" alt="JuiceLab Buah 5">
-                <img src="{{ asset('images/juicelab-buah-6.svg') }}" alt="JuiceLab Buah 6">
-            </div>
+            <form wire:submit.prevent="saveOrder">
+                <label for="fruits">Choose 3 Fruits:</label>
+                <select wire:model="fruit1">
+                    <option value="">Select a fruit</option>
+                    <option value="Strawberry">Strawberry</option>
+                    <option value="Avocado">Avocado</option>
+                    <option value="Grape">Grape</option>
+                </select>
+
+                <select wire:model="fruit2">
+                    <option value="">Select a fruit</option>
+                    <option value="Strawberry">Strawberry</option>
+                    <option value="Avocado">Avocado</option>
+                    <option value="Grape">Grape</option>
+                </select>
+
+                <select wire:model="fruit3">
+                    <option value="">Select a fruit</option>
+                    <option value="Strawberry">Strawberry</option>
+                    <option value="Avocado">Avocado</option>
+                    <option value="Grape">Grape</option>
+                </select>
 
 
-            <div class="relative flex flex-row gap-[3.1vw]">
+                <div class="relative flex flex-row text-center">
+                    <div
+                        class="font-bold relative font-afacad text-white text-[2vw] rounded-[2vw] h-[5vh] w-[10vw] bg-[#FF7676]">
+                        Clear
+                    </div>
+
+                    <button type="submit">
+                        <div
+                            class="font-bold ml-[60vw] relative font-afacad text-white text-[2vw] rounded-[2vw] h-[5vh] w-[10vw] bg-[#9DD071]">
+                            Done
+                        </div>
+                    </button>
+                </div>
+            </form>
+
+
+
+            {{-- <div class="relative flex flex-row gap-[3.1vw]">
                 <img src="{{ asset('images/juicelab-buah-7.svg') }}" alt="JuiceLab Buah 7">
                 <img src="{{ asset('images/juicelab-buah-8.svg') }}" alt="JuiceLab Buah 8">
                 <img src="{{ asset('images/juicelab-buah-9.svg') }}" alt="JuiceLab Buah 9">
                 <img src="{{ asset('images/juicelab-buah-10.svg') }}" alt="JuiceLab Buah 10">
                 <img src="{{ asset('images/juicelab-buah-11.svg') }}" alt="JuiceLab Buah 11">
                 <img src="{{ asset('images/juicelab-buah-12.svg') }}" alt="JuiceLab Buah 12">
-            </div>
+            </div> --}}
 
 
-            <div class="relative flex flex-row text-center">
-                <div
-                    class="font-bold relative font-afacad text-white text-[2vw] rounded-[2vw] h-[5vh] w-[10vw] bg-[#FF7676]">
-                    Clear
-                </div>
-
-                <div
-                    class="font-bold ml-[60vw] relative font-afacad text-white text-[2vw] rounded-[2vw] h-[5vh] w-[10vw] bg-[#9DD071]">
-                    Done
-                </div>
-            </div>
         </div>
 
 
