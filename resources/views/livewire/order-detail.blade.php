@@ -1,4 +1,4 @@
-<div class="w-full max-w-[85rem] py-10 px-4 sm:px-6 lg:px-8 mx-auto">
+<div class="w-full max-w-[85rem] py-10 px-4 sm:px-6 lg:px-8 mx-auto sm:h-[70vh]">
     <h1 class="text-4xl font-bold text-slate-500">Order Details</h1>
 
     <!-- Grid -->
@@ -121,8 +121,8 @@
     </div>
     <!-- End Grid -->
 
-    <div class="flex flex-col md:flex-row gap-4 mt-4">
-        <div class="relative w-[60vw]">
+    <div class="flex flex-col md:flex-row lg:gap-4 mt-4">
+        <div class="relative w-[90vw] sm:w-[60vw]">
             <div class="bg-white overflow-x-auto rounded-lg shadow-md p-6 mb-4">
                 <table class="w-full">
                     <thead>
@@ -141,16 +141,23 @@
                                 <td class="py-4">
                                     <div class="flex items-center">
                                         <img class="h-16 w-16 mr-4"
-                                            src="{{ url('storage', $item->product->images[0]) }}"
+                                            src="{{ $item->product->name === 'Custom Juice'
+                                                ? asset('storage/products/botol-kosong.svg')
+                                                : asset('storage/' . $item->product->images[0]) }}"
                                             alt="{{ $item->product->name }}">
-                                        <span class="font-semibold">{{ $item->product->name }}</span>
+                                        <span
+                                            class="text-[2vw] sm:ml-[0vw] ml-[-4vw] font-semibold sm:text-[1.2vw]">{{ $item->product->name }}</span>
                                     </div>
+
                                 </td>
-                                <td class="py-4">{{ Number::currency($item->unit_amount, 'IDR') }}</td>
+                                <td class="text-[3vw] py-4 sm:text-[1.2vw]">
+                                    {{ Number::currency($item->unit_amount, 'IDR') }}</td>
                                 <td class="py-4">
-                                    <span class="text-center w-8">{{ $item->quantity }}</span>
+                                    <span
+                                        class="text-[3vw] sm:ml-[3.5vw] sm:text-[1.2vw] ml-[7vw] text-center w-8">{{ $item->quantity }}</span>
                                 </td>
-                                <td class="py-4">{{ Number::currency($item->unit_amount, 'IDR') }}</td>
+                                <td class="py-4 text-[3vw] sm:text-[1.2vw]">
+                                    {{ Number::currency($item->unit_amount, 'IDR') }}</td>
                             </tr>
                         @endforeach
                         <!--[if ENDBLOCK]><![endif]-->
@@ -160,7 +167,7 @@
             </div>
 
         </div>
-        <div class="relative w-[30vw]">
+        <div class="relative w-[70vw] sm:w-[40vw] lg:mt-[0vh] sm:mt-[3vh]">
             <div class="bg-white rounded-lg shadow-md p-6">
                 <h2 class="text-lg font-semibold mb-4">Summary</h2>
                 <div class="flex justify-between mb-2">
