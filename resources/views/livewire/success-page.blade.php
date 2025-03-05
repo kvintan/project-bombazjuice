@@ -1,7 +1,7 @@
 <div>
     <section class="flex items-center font-poppins">
         <div
-            class="justify-center flex-1 max-w-6xl px-4 py-4 mx-auto bg-white border-black border-[0.1vw] rounded-md md:py-10 md:px-10">
+            class="justify-center flex-1 max-w-6xl px-4 py-4 mx-auto sm:h-[70vh] lg:h-[80vh] bg-white border-black border-[0.1vw] rounded-md md:py-10 md:px-10">
             <div>
                 <h1 class="px-4 mb-8 text-2xl font-semibold tracking-wide text-gray-700">
                     Thank you. Your order has been received. </h1>
