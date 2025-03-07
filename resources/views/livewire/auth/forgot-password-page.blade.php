@@ -55,7 +55,7 @@
                                 </div>
                                 <!-- End Form Group -->
                                 <button type="submit"
-                                    class="w-full py-3 px-4 inline-flex justify-center items-center gap-x-2 font-semibold rounded-lg hover:brightness-[80%] font-afacad text-[1.2vw] border-transparent bg-blue-600 text-white hover:bg-blue-700 disabled:opacity-50 disabled:pointer-events bg-[radial-gradient(223.16%_67.62%_at_50%_50%,_#698531_26.24%,_#90B042_100%)]">Reset
+                                    class="w-full py-3 px-4 inline-flex justify-center items-center gap-x-2 font-semibold rounded-lg hover:brightness-[80%] font-afacad text-[1.2vw] border-transparent bg-blue-600 text-white hover:bg-blue-700 disabled:opacity-50 disabled:pointer-events bg-[radial-gradient(223.16%67.62%_at_50%_50%,#698531_26.24%,_#90B042_100%)]">Reset
                                     password</button>
                             </div>
                         </form>
