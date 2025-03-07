@@ -15,14 +15,14 @@
         </div>
     @endif
 
-    <div class="h-[100vh] pl-[5vw] mt-[5vh] relative">
+    <div class="h-[80vh] lg:h-[100vh] pl-[5vw] mt-[5vh] relative">
 
         <div class="relative z-[-50]">
             <img class="ml-[-7vw] mt-[-7vh]" src="{{ asset('images/login-hiasan.svg') }}" alt="Hiasan Login">
         </div>
 
         <div
-            class="z-[10] relative w-[45vw] h-[65vh] pt-[5vh] ml-[40vw] mt-[-120vh] pl-[5vw] pr-[5vw] rounded-[2vw] border-[0.3vw] shadow-inset-register">
+            class="z-[0] sm:mt-[-85vh] sm:h-[50vh] relative lg:w-[45vw] w-[70vw] h-[40vh] bg-white bg-opacity-[80%] lg:h-[65vh] pt-[5vh] ml-[10vw] mt-[-60vh] lg:ml-[40vw] lg:mt-[-120vh] pl-[5vw] pr-[5vw] rounded-[2vw] border-[0.3vw] shadow-inset-register">
             <div class="p-4 sm:p-7">
                 <!-- Form -->
                 <form wire:submit.prevent='save'>
@@ -32,15 +32,16 @@
                         </div>
                     @endif
 
-                    <div class="grid gap-y-4 mt-[2vh]">
+                    <div class="grid gap-y-4 lg:mt-[2vh]">
                         <!-- Form Group -->
                         <div>
-                            <label class="text-[1.8vw] mt-[5vh] text-black font-afacad font-bold" for="email"
-                                class="block ">Email
+                            <label
+                                class="text-[4vw] sm:text-[3vw] lg:text-[1.8vw] mt-[5vh] text-black font-afacad font-bold"
+                                for="email" class="block ">Email
                                 address</label>
                             <div class="relative">
                                 <input type="email" id="email" wire:model="email"
-                                    class="py-[0.5vh] mt-[1vh] px-2 block w-full font-afacad border-black border-[0.2vw] rounded-lg text-[1vw]"
+                                    class="py-[0.5vh] text-[3vw] sm:text-[2vw] mt-[1vh] px-2 block w-full font-afacad border-black border-[0.2vw] rounded-lg lg:text-[1vw]"
                                     aria-describedby="email-error">
                                 @error('email')
                                     <div class="absolute inset-y-0 end-0 flex items-center pointer-events-none pe-3">
@@ -61,14 +62,14 @@
                         <div>
                             <div class="flex justify-between items-center relative">
                                 <label for="password"
-                                    class="text-[1.8vw] mt-[5vh] text-black font-afacad font-bold">Password</label>
+                                    class="text-[4vw] sm:text-[3vw] lg:text-[1.8vw] mt-[5vh] text-black font-afacad font-bold">Password</label>
                                 <a wire:navigate
-                                    class="text-[vw] mt-[6vh] font-afacad text-blue-600 decoration-2 hover:underline font-medium dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600"
+                                    class="text-[3vw] sm:text-[2vw] lg:text-[1vw] mt-[6vh] font-afacad text-blue-600 decoration-2 hover:underline font-medium dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600"
                                     href="/forgot">Forgot password?</a>
                             </div>
                             <div class="relative">
                                 <input type="password" id="password" wire:model="password"
-                                    class="py-[0.5vh] mt-[1vh] px-2 block w-full font-afacad border-black border-[0.2vw] rounded-lg text-[1vw]"
+                                    class="py-[0.5vh] sm:text-[2vw] mt-[1vh] px-2 block w-full font-afacad border-black border-[0.2vw] rounded-lg text-[3vw] lg:text-[1vw]"
                                     aria-describedby="password-error">
                                 @error('password')
                                     <div class="absolute inset-y-0 end-0 flex items-center pointer-events-none pe-3">
@@ -86,18 +87,19 @@
                         </div>
                         <!-- End Form Group -->
                         <button type="submit"
-                            class="ml-[5vw] mt-[5vh] text-[1.5vw] font-bold text-white font-afacad h-[6vh] w-[20vw] rounded-[2.1vw] hover:brightness-[60%] bg-[radial-gradient(223.16%67.62%_at_50%_50%,#698531_26.24%,_#90B042_100%)] disabled:opacity-50 disabled:pointer-events-none">Log
+                            class="ml-[5vw] lg:mt-[5vh] sm:mt-[5vh] mt-[1vh] text-[4vw] lg:text-[1.5vw] font-bold text-white font-afacad h-[4vh] rounded-[4vw] w-[40vw] lg:h-[6vh] lg:w-[20vw] lg:rounded-[2.1vw] hover:brightness-[60%] bg-[radial-gradient(223.16%67.62%_at_50%_50%,#698531_26.24%,_#90B042_100%)] disabled:opacity-50 disabled:pointer-events-none">Log
                             in</button>
                     </div>
                 </form>
                 <!-- End Form -->
 
                 <div class="text-center">
-                    <h1 class="block text-2xl font-bold text-gray-800 dark:text-white">Sign in</h1>
-                    <p class="mt-[-2vh] ml-[-0.5vw] relative text-sm font-afacad text-[1vw] text-black">
+                    <h1 class="block text-2xl font-bold invisible text-gray-800 dark:text-white">Sign in</h1>
+                    <p
+                        class="mt-[-2vh] sm:text-[2vw] ml-[-0.5vw] relative text-[3vw] lg:text-sm font-afacad lg:text-[1vw] text-black">
                         Don't have an account yet?
                         <a wire:navigate
-                            class="text-blue-600 font-afacad text-[1vw] decoration-2 hover:underline font-medium dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600"
+                            class="text-blue-600 sm:text-[1.5vw] font-afacad text-[2.5vw] lg:text-[1vw] decoration-2 hover:underline font-medium dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600"
                             href="/register">
                             Sign up here
                         </a>
