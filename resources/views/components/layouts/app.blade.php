@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>{{ $title ?? 'BomBazJuice' }}</title>
+    <link rel="icon" href="{{ asset('images/logo.svg') }}" type="image/x-icon">
     {{-- <link rel="icon" type="image/x-icon" href="{{ asset('images/') }}"> --}}
     <link rel="stylesheet" href="https://rsms.me/inter/inter.css">
     <link rel="stylesheet" href="../../css/navbar.css">
