@@ -4,11 +4,13 @@ namespace App\Livewire;
 
 use App\Models\User;
 use Livewire\Component;
+use Livewire\Attributes\Title;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Session;
 use Jantinnerezo\LivewireAlert\LivewireAlert;
 
+#[Title('Profile - BomBazJuice')]
 class ProfilePage extends Component
 {
     use LivewireAlert;
