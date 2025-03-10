@@ -32,7 +32,7 @@
                     <div class="w-full px-4 mb-4 md:w-1/4">
                         <p class="mb-2 text-sm font-medium leading-5 text-gray-800 ">
                             Total: </p>
-                        <p class="text-base font-semibold leading-4 text-blue-600">
+                        <p class="text-base font-semibold leading-4 text-[#6FE20D] brightness-[80%]">
                             {{ Number::currency($order->grand_total, 'IDR') }}</p>
                     </div>
                     <div class="w-full px-4 mb-4 md:w-1/4">
@@ -88,11 +88,11 @@
                 </div>
                 <div class="flex items-center justify-start gap-4 px-4 mt-6 ">
                     <a wire:navigate href="/menu"
-                        class="w-full text-center px-4 py-2 text-blue-500 border border-blue-500 rounded-md md:w-auto hover:text-white hover:bg-blue-600">
+                        class="w-full text-center px-4 py-2 text-[#1C4816] border border-[#1C4816] rounded-md md:w-auto hover:text-white hover:bg-[#1C4816]">
                         Go back shopping
                     </a>
                     <a wire:navigate href="/history"
-                        class="w-full text-center px-4 py-2 bg-blue-500 rounded-md text-gray-50 md:w-auto hover:bg-blue-600">
+                        class="w-full text-center px-4 py-2 bg-[#1C4816] rounded-md text-gray-50 md:w-auto hover:bg-[#1C4816] hover:brightness-[80%]">
                         View My Orders
                     </a>
                 </div>

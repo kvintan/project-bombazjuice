@@ -19,10 +19,10 @@
                                 <!-- Form Group -->
                                 <div>
                                     <label for="password"
-                                        class="block text-sm mb-2 text-black font-afacad text-[1.3vw]">Password</label>
+                                        class="block text-[1vw] mb-2 text-black font-afacad">Password</label>
                                     <div class="relative">
                                         <input type="password" id="password" wire:model="password"
-                                            class="py-3 px-4 block w-full border border-gray-600 rounded-lg text-sm focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none font-afacad text-black text-[1.3vw]"
+                                            class="py-3 px-4 block w-full border border-gray-600 rounded-lg text-sm focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none"
                                             aria-describedby="email-error">
                                         @error('password')
                                             <div
