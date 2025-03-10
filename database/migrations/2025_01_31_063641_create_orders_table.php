@@ -11,13 +11,16 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('orders', function (Blueprint $table) {
+        Schema::create('products', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('user_id')->constrained('users')->cascadeOnDelete();
-            $table->decimal('grand_total', 10, 2)->nullable();
-            $table->string('payment_method')->nullable();
-            $table->string('currency')->nullable();
-            $table->string('notes')->nullable();
+            $table->string('name');
+            $table->string('slug')->unique();
+            $table->json('images')->nullable();
+            $table->longText('description')->nullable();
+            $table->decimal('price', 10, 2);
+            $table->boolean('is_active')->default(true);
+            $table->boolean('is_featured')->default(false);
+            $table->boolean('in_stock')->default(true);
             $table->timestamps();
         });
     }

@@ -24,13 +24,14 @@ class CartManagement {
       $cart_items[$existing_item]['quantity']++;
       $cart_items[$existing_item]['total_amount'] = $cart_items[$existing_item]['quantity'] * $cart_items[$existing_item]['unit_amount'];
     } else {
-      $product = Product::where('id', $product_id)->first(['id', 'name', 'price', 'images']);
+      $product = Product::where('id', $product_id)->first(['id', 'name', 'price', 'images', 'description']);
 
       if ($product) {
       $cart_items[] = [
       'product_id' => $product_id,
       'name' => $product->name,
       'image' => $product->images[0],
+      'description' => $product->description,
       'quantity' => 1,
       'unit_amount' => $product->price,
       'total_amount' => $product->price
