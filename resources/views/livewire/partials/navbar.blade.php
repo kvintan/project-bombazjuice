@@ -3,18 +3,10 @@
         <div class="flex lg:flex-1">
             <a href="/" class="-m-1.5 p-1.5">
                 <span class="sr-only">BomBazJuice</span>
-                <img class="h-[3.5vw] w-auto" src="{{ asset('images/logo-navbar.svg') }}" alt="Logo Navbar">
+                <!-- Adjust image size for different screen sizes -->
+                <img class="w-[40vw] sm:w-[30vw] lg:w-[10vw]" src="{{ asset('images/logo-navbar-final.svg') }}"
+                    alt="Logo Navbar">
             </a>
-        </div>
-        <div class="flex lg:hidden">
-            <button type="button"
-                class="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-700">
-                <svg class="size-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
-                    aria-hidden="true" data-slot="icon">
-                    <path stroke-linecap="round" stroke-linejoin="round"
-                        d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
-                </svg>
-            </button>
         </div>
         <div class="hidden lg:flex lg:gap-x-7 relative z-[50]">
             @component('livewire.partials.nav-link', [
@@ -80,9 +72,9 @@
         </div>
 
         @auth
-            <div class="relative group mr-[-4vw]">
+            <div class="relative group mr-[-4vw] z-[30]">
                 <button type="button"
-                    class="flex items-center w-full text-black hover:text-underline font-medium font-afacad">
+                    class="flex items-center sm:ml-[-17vw] lg:ml-[0vw] ml-[-25vw] w-full text-black hover:text-underline font-medium font-afacad">
                     {{ auth()->user()->name }}
                     <svg class="ms-2 w-4 h-4" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
                         viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
@@ -93,7 +85,7 @@
 
                 <!-- Dropdown Menu -->
                 <div
-                    class="hidden w-[8vw] group-hover:flex flex-col gap-2 hs-dropdown-menu transition-opacity duration-150 opacity-0 group-hover:opacity-100 absolute top-full mt-0 bg-white shadow-md rounded-lg p-2 pointer-events-auto">
+                    class="hidden w-[20vw] sm:ml-[-20vw] lg:w-auto sm:w-[15vw] lg:ml-[0vw] ml-[-20vw] group-hover:flex flex-col gap-2 hs-dropdown-menu transition-opacity duration-150 opacity-0 group-hover:opacity-100 absolute top-full mt-0 bg-white shadow-md rounded-lg p-2 pointer-events-auto">
                     <a wire:navigate
                         class="text-black font-afacad flex items-center gap-x-3.5 py-2 px-3 rounded-lg text-sm hover:bg-gray-300 text-[1vw]"
                         href="/history">
@@ -115,80 +107,84 @@
         @endauth
 
     </nav>
+
+
     <!-- Mobile menu, show/hide based on menu open state. -->
-    <div class="lg:hidden" role="dialog" aria-modal="true">
-        <!-- Background backdrop, show/hide based on slide-over state. -->
-        <div class="fixed inset-0 z-10"></div>
-        <div
-            class="fixed inset-y-0 right-0 z-10 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
+    <div x-data="{ open: false }" class="lg:hidden" role="dialog" aria-modal="true">
+        <!-- Hamburger Menu Button (Only One Hamburger Button) -->
+        <div class="flex lg:hidden absolute right-[5vw] top-[4vh] z-50" x-show="!open">
+            <button @click="open = !open" type="button"
+                class="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-700">
+                <svg class="size-6 scale-[150%] sm:scale-[150%]" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                    stroke="currentColor" aria-hidden="true">
+                    <path stroke-linecap="round" stroke-linejoin="round"
+                        d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+                </svg>
+            </button>
+        </div>
+
+        <!-- Background backdrop, show/hide based on menu state -->
+        <div x-show="open" class="fixed inset-0 z-10 bg-gray-500 opacity-50"
+            x-transition:enter="transition-opacity ease-in-out duration-300" x-transition:enter-start="opacity-0"
+            x-transition:enter-end="opacity-50" x-transition:leave="transition-opacity ease-in-out duration-300"
+            x-transition:leave-start="opacity-50" x-transition:leave-end="opacity-0"></div>
+
+        <!-- Mobile Menu -->
+        <div x-show="open"
+            class="fixed inset-y-0 right-0 z-[100] w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10"
+            x-transition:enter="transition transform ease-in-out duration-300"
+            x-transition:enter-start="translate-x-full" x-transition:enter-end="translate-x-0"
+            x-transition:leave="transition transform ease-in-out duration-300" x-transition:leave-start="translate-x-0"
+            x-transition:leave-end="translate-x-full">
+
+            <!-- Header with logo and close button -->
             <div class="flex items-center justify-between">
-                <a href="#" class="-m-1.5 p-1.5">
-                    <span class="sr-only">Your Company</span>
-                    <img class="h-8 w-auto" src="https://tailwindui.com/plus/img/logos/mark.svg?color=indigo&shade=600"
-                        alt="">
+                <a href="/" class="-m-1.5 p-1.5">
+                    <span class="sr-only">BomBazJuice</span>
+                    <img src="{{ asset('images/logo-navbar-final.svg') }}" alt="Logo">
                 </a>
-                <button type="button" class="-m-2.5 rounded-md p-2.5 text-gray-700">
+                <!-- Close Button -->
+                <button @click="open = false" type="button" class="-m-2.5 rounded-md p-2.5 text-gray-700">
                     <span class="sr-only">Close menu</span>
                     <svg class="size-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
-                        aria-hidden="true" data-slot="icon">
+                        aria-hidden="true">
                         <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
                     </svg>
                 </button>
             </div>
+
+            <!-- Menu Items -->
             <div class="mt-6 flow-root">
                 <div class="-my-6 divide-y divide-gray-500/10">
                     <div class="space-y-2 py-6">
-                        <div class="-mx-3">
-                            <button type="button"
-                                class="flex w-full items-center justify-between rounded-lg py-2 pl-3 pr-3.5 text-base/7 font-semibold text-gray-900 hover:bg-gray-50"
-                                aria-controls="disclosure-1" aria-expanded="false">
-                                Product
-                                <!--
-                    Expand/collapse icon, toggle classes based on menu open state.
-  
-                    Open: "rotate-180", Closed: ""
-                  -->
-                                <svg class="size-5 flex-none" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"
-                                    data-slot="icon">
-                                    <path fill-rule="evenodd"
-                                        d="M5.22 8.22a.75.75 0 0 1 1.06 0L10 11.94l3.72-3.72a.75.75 0 1 1 1.06 1.06l-4.25 4.25a.75.75 0 0 1-1.06 0L5.22 9.28a.75.75 0 0 1 0-1.06Z"
-                                        clip-rule="evenodd" />
-                                </svg>
-                            </button>
-                            <!-- 'Product' sub-menu, show/hide based on menu state. -->
-                            <div class="mt-2 space-y-2" id="disclosure-1">
-                                <a href="#"
-                                    class="block rounded-lg py-2 pl-6 pr-3 text-sm/7 font-semibold text-gray-900 hover:bg-gray-50">Analytics</a>
-                                <a href="#"
-                                    class="block rounded-lg py-2 pl-6 pr-3 text-sm/7 font-semibold text-gray-900 hover:bg-gray-50">Engagement</a>
-                                <a href="#"
-                                    class="block rounded-lg py-2 pl-6 pr-3 text-sm/7 font-semibold text-gray-900 hover:bg-gray-50">Security</a>
-                                <a href="#"
-                                    class="block rounded-lg py-2 pl-6 pr-3 text-sm/7 font-semibold text-gray-900 hover:bg-gray-50">Integrations</a>
-                                <a href="#"
-                                    class="block rounded-lg py-2 pl-6 pr-3 text-sm/7 font-semibold text-gray-900 hover:bg-gray-50">Automations</a>
-                                <a href="#"
-                                    class="block rounded-lg py-2 pl-6 pr-3 text-sm/7 font-semibold text-gray-900 hover:bg-gray-50">Watch
-                                    demo</a>
-                                <a href="#"
-                                    class="block rounded-lg py-2 pl-6 pr-3 text-sm/7 font-semibold text-gray-900 hover:bg-gray-50">Contact
-                                    sales</a>
-                            </div>
-                        </div>
-                        <a href="#"
-                            class="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50">Features</a>
-                        <a href="#"
-                            class="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50">Marketplace</a>
-                        <a href="#"
-                            class="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50">Company</a>
+                        <a wire:navigate href="/"
+                            class="block rounded-lg py-2 pl-[2vw] font-arimo pr-3 text-base font-bold text-gray-900 hover:bg-gray-50">Home</a>
+                        <a wire:navigate href="/menu"
+                            class="block rounded-lg py-2 pl-[2vw] font-arimo pr-3 text-base font-bold text-gray-900 hover:bg-gray-50">Menu</a>
+                        <a wire:navigate href="/juicelab"
+                            class="block rounded-lg py-2 pl-[2vw] font-arimo pr-3 text-base font-bold text-gray-900 hover:bg-gray-50">JuiceLab</a>
+                        <a wire:navigate href="/fruitstats"
+                            class="block rounded-lg py-2 pl-[2vw] font-arimo pr-3 text-base font-bold text-gray-900 hover:bg-gray-50">FruitStats</a>
+                        <a wire:navigate href="/contact-us"
+                            class="block rounded-lg py-2 pl-[2vw] font-arimo pr-3 text-base font-bold text-gray-900 hover:bg-gray-50">Contact
+                            Us</a>
+                        <a wire:navigate href="/store"
+                            class="block rounded-lg py-2 pl-[2vw] font-arimo pr-3 text-base font-bold text-gray-900 hover:bg-gray-50">Store</a>
                     </div>
+
+                    <!-- Login Link -->
                     <div class="py-6">
-                        <a href="#"
-                            class="-mx-3 block rounded-lg px-3 py-2.5 text-base/7 font-semibold text-gray-900 hover:bg-gray-50">Log
+                        <a wire:navigate href="/cart"
+                            class="-mx-3 block rounded-lg px-3 font-arimo py-2.5 pl-[5vw] text-base font-bold text-gray-900 sm:pl-[3.5vw] hover:bg-gray-50">Cart</a>
+                        <a wire:navigate href="/login"
+                            class="-mx-3 block rounded-lg px-3 font-arimo py-2.5 pl-[5vw] text-base font-bold text-gray-900 sm:pl-[3.5vw] hover:bg-gray-50">Log
                             in</a>
                     </div>
                 </div>
             </div>
         </div>
     </div>
+
+
+
 </header>
